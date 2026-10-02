@@ -1,2 +1,5 @@
 _practice/01.hello.exe
 _practice/02.hello_whg.exe
+_practice/03_calculate.exe
+*.exe
+*.o
