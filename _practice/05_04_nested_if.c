@@ -4,7 +4,7 @@ int main(){
     int a,b,c;
 
     printf("Please enter the three numbers what do you want to compare:");
-    scanf("%d,%d,%d",&a,&b,&c);
+    scanf("%d %d %d",&a,&b,&c);
 
     if(a > b)
         if(b > c){
