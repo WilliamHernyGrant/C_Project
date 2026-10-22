@@ -8,7 +8,7 @@ long long factorial(int n){
     for(int i = 2; i<=n; i++)
     {result *=i;}
     return result;
-}
+}//函数封装；工程化应用
 int main(){
     int N;
     printf("Please enter the number to calculate its factorial of:");
