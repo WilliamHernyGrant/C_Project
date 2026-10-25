@@ -4,8 +4,14 @@ int main(){
     int n=0;
 printf("Input:");
 scanf("%d",&x);
-    do{ n++;
+    do{ if(x > 0){
+        n++;
+        x /= 10;}
+        else if(x < 0){
+        x = -x;
+        n++;
         x /= 10;
+        }
     }while(x > 0);
-printf("Ruslt:%d",n);
+printf("Result:%d",n);
 }
