@@ -13,5 +13,5 @@ int main(){
         x /= 10;
         n++;
     }
-    printf("Ruslt:%d",n);
+    printf("Result:%d",n);
 }

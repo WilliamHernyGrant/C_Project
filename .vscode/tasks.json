@@ -1,0 +1,33 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "编译当前文件",
+      "type": "cppbuild",
+      "command": "C:\\mingw64\\bin\\gcc.exe",
+      "args": [
+        "-fdiagnostics-color=always",
+        "-Wall",
+        "-Wextra",
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}\\..\\bin\\${fileBasenameNoExtension}.exe"
+      ],
+      "options": { "cwd": "${fileDirname}" },
+      "problemMatcher": ["$gcc"],
+      "group": { "kind": "build", "isDefault": true },
+      "detail": "把 src 下的 .c 编译到上一级的 bin 目录"
+    },
+    {
+      "label": "编译并运行",
+      "type": "shell",
+      "command": "cmd",
+      "args": ["/c", "${fileDirname}\\..\\bin\\${fileBasenameNoExtension}.exe"],
+      "options": { "cwd": "${fileDirname}\\..\\bin" },
+      "dependsOn": "编译当前文件",
+      "presentation": { "reveal": "always", "panel": "dedicated", "clear": true },
+      "problemMatcher": []
+    }
+  ]
+}
